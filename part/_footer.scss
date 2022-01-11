@@ -1,0 +1,53 @@
+.footer {
+    background-color: $black;
+    color: $white;
+    margin-top: 150px;
+
+    @include screen1250 {
+        margin-top: 40px;
+    }
+
+    .container {
+        @extend %container-x;
+        padding: 80px;
+        position: relative;
+
+    }
+
+    &__description {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr;
+        grid-column-gap: 120px;
+        grid-row-gap: 25px;
+
+        @include tablet {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__item {
+        h5 {
+            font: {
+                family: $inter;
+                size: 18px;
+                weight: bold;
+            }
+        }
+
+        p {
+            font: {
+                family: $inter;
+                size: 15px;
+                weight: normal;
+            }
+
+            color: rgb(177, 174, 174);
+        }
+    }
+
+    .text2 {
+        line-height: 28px;
+    }
+}

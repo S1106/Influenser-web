@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    @extend %section_snow;
+}
+
+body {
+    font: {
+        family: $rammetto;
+        size: 1rem;
+    }
+
+    line-height: 1.5em;
+}
+
+.button {
+    display: block;
+
+    background: {
+        repeat: no-repeat;
+        position: left;
+    }
+
+    height: 25px;
+    margin-top: 20px;
+
+    &--white {
+        background-image: url(img/arrow.svg);
+    }
+
+    &--black {
+        background-image: url(img/arrow2.svg);
+    }
+
+}

@@ -1,0 +1,93 @@
+.wrapper {
+   background-color: $green;
+
+   .container {
+
+      width: 90%;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      margin: 0 auto;
+      padding: 100px 150px;
+      grid-column-gap: 50px;
+
+      @include screen1050 {
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr 1fr 1fr;
+         text-align: center;
+      }
+
+      @include tablet {
+         padding: 50px;
+      }
+
+   }
+
+   &__text,
+   &__text p {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $white;
+
+      font: {
+         family: $rammetto;
+         size: 2rem;
+      }
+
+      line-height: 1.5em;
+   }
+
+   &__description1 h4,
+   &__description2 h4 {
+      font: {
+         family: $inter;
+         size: 24px;
+      }
+   }
+
+   &__description1 p,
+   &__description2 p,
+   &__text p {
+      font: {
+         family: $poppins;
+         size: 15px;
+      }
+
+      padding-top: 30px;
+      text-align: justify;
+
+      @include screen1050 {
+         text-align: center;
+      }
+
+   }
+
+   &__description1,
+   &__description2 {
+      border: 2px solid $white;
+      border-radius: 10px;
+
+      @include screen1050 {
+         margin-bottom: 50px;
+      }
+   }
+
+   &__description2 {
+      border: 2px solid var(--black);
+      background-color: $white;
+   }
+
+   &__description1 {
+      color: $white;
+      padding: 40px;
+   }
+
+   &__description2 {
+      color: $black;
+      padding: 40px;
+   }
+
+   img {
+      margin-bottom: 25px;
+   }
+}

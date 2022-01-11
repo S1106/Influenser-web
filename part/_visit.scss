@@ -1,0 +1,67 @@
+.visit {
+
+    .container {
+        @extend %container-x;
+        background-color: $green;
+        padding-bottom: 100px;
+
+        @include screen1500 {
+            padding: 100px;
+        }
+
+    }
+
+    .bubble1 {
+        transform: translate(1100px, -50px);
+
+        @include screen1500 {
+            display: none;
+        }
+    }
+
+    .bubble2 {
+        transform: translate(650px, 350px);
+
+        @include screen1500 {
+            display: none;
+        }
+    }
+
+    .bubble3 {
+        transform: translate(-150px, -50px);
+
+        @include screen1500 {
+            display: none;
+        }
+    }
+
+    &__text {
+        @extend %description__style4;
+        max-width: 530px;
+        margin: 0 auto;
+    }
+
+    &__register {
+        display: block;
+        margin: 0 auto;
+        max-width: 220px;
+        height: 3rem;
+        margin-top: 35px;
+        border: 2px solid $white;
+
+        a {
+            text-decoration: none;
+            color: $white;
+            display: block;
+            text-align: center;
+            line-height: 2.5rem;
+
+            font: {
+                family: $inter;
+                size: 18px;
+                weight: bold;
+            }
+
+        }
+    }
+}

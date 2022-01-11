@@ -1,0 +1,92 @@
+.firstscreen {
+    @include screen1050 {
+        margin-bottom: 50px;
+    }
+
+    .container {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        margin: 100px auto 0;
+    }
+
+    &__description {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__screen {
+        overflow: hidden;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            transform: scale(1.04);
+
+            @include screen1050 {
+                display: none;
+            }
+
+        }
+    }
+
+    &__stars {
+        text-align: right;
+
+        @include screen1050 {
+            text-align: center;
+        }
+
+    }
+
+    &__text {
+
+        h1 {
+            font: {
+                size: 3.75rem;
+                family: $rammetto;
+            }
+
+            line-height: 65px;
+
+            span {
+                color: $green;
+            }
+        }
+
+        p {
+            font: {
+                size: 1rem;
+                family: $inter;
+            }
+
+            line-height: 1rem;
+            text-align:center;
+            color: $grey;
+            margin: 30px;
+        }
+    }
+
+    .button__screen {
+        display: inline-block;
+        text-align: center;
+        width: 208px;
+        height: 2.8rem;
+        font-size: 18px;
+        font-weight: bold;
+
+        &:nth-child(1) {
+            color: $white;
+            background-color: $green;
+            border: 1px solid $green;
+        }
+
+        &:nth-child(2) {
+            color: $black;
+            background-color: $snow;
+            border: 1px solid $black;
+        }
+    }
+}
