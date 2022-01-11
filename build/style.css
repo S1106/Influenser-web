@@ -635,9 +635,17 @@ body {
       text-align: center; } }
 .case__item__big {
   grid-row-start: 1;
-  grid-row-end: 3; }
+  grid-row-end: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   .case__item__big img {
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    width: 150px; }
+    @media screen and (max-width: 1050px) {
+      .case__item__big img {
+        margin: 15px auto;
+        display: block; } }
 .case__item {
   display: flex;
   flex-direction: column;
@@ -670,13 +678,15 @@ body {
     .contacts .container {
       margin-bottom: 20px; } }
 .contacts .avatar {
-  display: block;
   width: 80px;
   height: 80px;
   border-radius: 50%;
   margin: 0 auto;
   box-shadow: 0 0 0 7px #E5E5E5, 0 0 0 8px #6F764D;
   overflow: hidden; }
+  .contacts .avatar img {
+    transform: scale(1.25);
+    height: 100%; }
 .contacts .stars {
   margin: 15px; }
 .contacts__items {

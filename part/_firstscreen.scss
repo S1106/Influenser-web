@@ -25,6 +25,7 @@
             margin: 0 auto;
             transform: scale(1.04);
 
+
             @include screen1050 {
                 display: none;
             }

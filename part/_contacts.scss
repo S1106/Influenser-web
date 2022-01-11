@@ -12,13 +12,16 @@
     }
 
     .avatar {
-        display: block;
         width: 80px;
         height: 80px;
         border-radius: 50%;
         margin: 0 auto;
         box-shadow: 0 0 0 7px $snow, 0 0 0 8px $green;
         overflow: hidden;
+         img {
+             transform: scale(1.25);
+             height: 100%;
+         }
     }
 
     .stars {
@@ -40,7 +43,7 @@
         border: 1px solid rgb(214, 213, 213);
         border-radius: 5px;
         padding: 30px;
-
+        
         @include screen1250 {
             margin-bottom: 20px;
         }

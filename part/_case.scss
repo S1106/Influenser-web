@@ -58,9 +58,17 @@
         grid-row-start: 1;
         grid-row-end: 3;
         @extend %description__style2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         img {
             margin-bottom: 25px;
+            width: 150px;
+            @include screen1050 {
+                margin: 15px auto;
+                display: block;
+            }
         }
     }
 
